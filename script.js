@@ -1,3 +1,28 @@
+const link = 'https://pay.kirvano.com/52e4fc52-2acb-48b5-bbec-ff1419b4d535';
+
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(link);
+
+
+
 // Substitua pelo seu link de checkout da Kirvano
 const kirvanoCheckoutUrl = "https://pay.kirvano.com/52e4fc52-2acb-48b5-bbec-ff1419b4d535";
 
@@ -62,4 +87,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
