@@ -1,5 +1,5 @@
 // Substitua pelo seu link de checkout da Kirvano
-const kirvanoCheckoutUrl = "https://kirvano.com/seu-checkout-aqui";
+const kirvanoCheckoutUrl = "https://pay.kirvano.com/52e4fc52-2acb-48b5-bbec-ff1419b4d535";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Menu hamburguer: abre/fecha no mobile
@@ -62,3 +62,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
